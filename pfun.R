@@ -34,5 +34,5 @@ setMethod("pfun", signature(RaschObj="Rasch",theta="numeric"),
              pr<-exp(theta-RaschObj@a)/(1+exp(theta-RaschObj@a))
              ## pq returns pr if yj==1, 1-pr if yj==0.
              pq<-RaschObj@yj*pr+(1-RaschObj@yj)*(1-pr)
-             return(list(pr,pq))
+             return(list(pr=pr,pq=pq))
            })
