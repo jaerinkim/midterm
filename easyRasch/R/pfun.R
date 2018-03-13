@@ -15,23 +15,17 @@
 #' pfun(atesttaker,2)
 #' @seealso
 #' @rdname pfun
-#' @aliases pfun,ANY-method
 
 
-setMethod("initialize", "Rasch",  function(.Object, ...){
-  value = callNextMethod()
-  validObject(value)
-  return(value)
-}
-)
-
-#' @export
 setGeneric("pfun",function(RaschObj,theta){return("Wrong usage of the function. Refer to the documentation.")})
 #' @export
 setMethod("pfun", signature(RaschObj="Rasch",theta="numeric"),
            function(RaschObj,theta){
              ## Exactly the same function as in the exam question.
-             pr<-exp(theta-RaschObj@a)/(1+exp(theta-RaschObj@a))
+             ## Used 'rep' function to combat 'integrate' function errors
+             ## In other words, theta is replaced with a vector of thetas with length of a.
+             ## ('integrate' does not seem very flexible for an R function)
+             pr<-exp(rep(theta,length(RaschObj@a))-RaschObj@a)/(1+exp(rep(theta,length(RaschObj@a))-RaschObj@a))
              ## pq returns pr if yj==1, 1-pr if yj==0.
              pq<-RaschObj@yj*pr+(1-RaschObj@yj)*(1-pr)
              return(list(pr=pr,pq=pq))

@@ -2,7 +2,6 @@
 % Please edit documentation in R/eap.R
 \name{eap}
 \alias{eap}
-\alias{eap,ANY-method}
 \title{Expected a posteriori value}
 \usage{
 eap(RaschObj, lower = -6, upper = 6)

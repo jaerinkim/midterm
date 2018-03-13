@@ -4,7 +4,6 @@
 \name{Rasch-class}
 \alias{Rasch-class}
 \alias{Rasch}
-\alias{Rasch,ANY-method}
 \title{Rasch Class}
 \arguments{
 \item{name}{The test taker's name}
@@ -12,6 +11,9 @@
 \item{a}{A vector of question-item parameters}
 
 \item{yj}{A vector of answers for the respondent}
+}
+\value{
+A class with three elements, name, a, and yj
 }
 \description{
 Defines class Rasch

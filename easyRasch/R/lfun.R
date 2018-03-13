@@ -14,7 +14,6 @@
 #' lfun(atesttaker,2)
 #' @seealso
 #' @rdname lfun
-#' @aliases lfun,ANY-method
 
 
 

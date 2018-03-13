@@ -11,7 +11,7 @@ prior(theta)
 \item{theta}{A proposed value of theta}
 }
 \value{
-a value
+Prior value given the theta
 }
 \description{
 The function calculating prior per given theta

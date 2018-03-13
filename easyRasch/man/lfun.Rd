@@ -2,7 +2,6 @@
 % Please edit documentation in R/lfun.R
 \name{lfun}
 \alias{lfun}
-\alias{lfun,ANY-method}
 \title{Likelihood Function}
 \usage{
 lfun(RaschObj, theta)

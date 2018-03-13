@@ -3,7 +3,6 @@
 \docType{methods}
 \name{print,Rasch-method}
 \alias{print,Rasch-method}
-\alias{print.Rasch,ANY-method}
 \title{Rasch Method for Print}
 \usage{
 \S4method{print}{Rasch}(x)
