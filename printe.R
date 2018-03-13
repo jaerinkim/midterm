@@ -18,6 +18,7 @@
 
 #' @export
 setMethod("print", signature(x="Rasch"),
+          ##
           ##Setting default lower and upper bound, as instructed.
           function(x){
             return(list(Name=x@name,
