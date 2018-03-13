@@ -6,13 +6,10 @@
 #' @param a A vector of question-item parameters
 #' @param yj A vector of answers for the respondent
 #' 
-#' @return the output containing
-#' \item{outputa}{first output}
-#' \item{outputb}{second output}
 #' @author Jaerin Kim
 #' @note This class is just for the exam.
 #' @examples
-#' atesttaker<-new("Rasch", name="Jaerin", a=c(1:10), yj=c(1:10))
+#' atesttaker<-new("Rasch", a=c(1:10), yj=c(1:10))
 #' atesttaker
 #' 
 #' @seealso
@@ -34,6 +31,10 @@ Rasch<-setClass(Class="Rasch", #Making the object "Rasch" to make further coding
                ## The most obvious error should be when the student solved too much or too less.
                  if(length(object@a)!=length(object@yj)){       
                    return("Solve more problems! Or less.")
+                 }
+                 ## yj should be binary. Unless we have partial credits.
+                 if(!yj%in%0:1){
+                   return("The answer should be either right or wrong.")
                  }
               ## No other validity issues. Non-character names cannot be assigned,
                  ## even without validity test.
