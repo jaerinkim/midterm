@@ -15,6 +15,7 @@
 #' pfun(atesttaker,2)
 #' @seealso
 #' @rdname pfun
+#' @aliases pfun,ANY-method
 
 
 setMethod("initialize", "Rasch",  function(.Object, ...){

@@ -14,7 +14,7 @@
 #' eap(atesttaker,-Inf,Inf)
 #' @seealso
 #' @rdname eap
-
+#' @aliases eap,ANY-method
 
 setGeneric("eap",function(RaschObj,lower=-6,upper=6){
   return("Wrong usage of the function. Refer to the documentation.")})

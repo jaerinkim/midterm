@@ -5,7 +5,7 @@
 #' @param name The test taker's name
 #' @param a A vector of question-item parameters
 #' @param yj A vector of answers for the respondent
-#' @return A class with three elements, name, a, and yj
+#' 
 #' @author Jaerin Kim
 #' @note This class is just for the exam.
 #' @examples
@@ -14,6 +14,7 @@
 #' 
 #' @seealso
 #' @rdname Rasch
+#' @aliases Rasch,ANY-method
 #' @export
 Rasch<-setClass(Class="Rasch", #Making the object "Rasch" to make further coding easier.
 

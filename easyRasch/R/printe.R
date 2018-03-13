@@ -12,6 +12,7 @@
 #' print(atesttaker)
 #' @seealso
 #' @rdname print.Rasch
+#' @aliases print.Rasch,ANY-method
 
 #' @export
 setMethod("print", signature(x="Rasch"),

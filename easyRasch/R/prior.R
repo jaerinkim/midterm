@@ -4,7 +4,7 @@
 #' 
 #' @param theta A proposed value of theta
 #'  
-#' @return Prior value given the theta
+#' @return a value
 #' @author Jaerin Kim
 #' @note This function is just for the exam.
 #' @examples
