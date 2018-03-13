@@ -9,7 +9,7 @@
 #' @author Jaerin Kim
 #' @note This class is just for the exam.
 #' @examples
-#' atesttaker<-new("Rasch", a=c(1:10), yj=c(1:10))
+#' atesttaker<-new("Rasch", a=c(1:10), yj=rep(c(1,0),5))
 #' atesttaker
 #' 
 #' @seealso
@@ -33,7 +33,7 @@ Rasch<-setClass(Class="Rasch", #Making the object "Rasch" to make further coding
                    return("Solve more problems! Or less.")
                  }
                  ## yj should be binary. Unless we have partial credits.
-                 if(!yj%in%0:1){
+                 if(sum(object@yj%in%0:1)!=length(object@yj)){
                    return("The answer should be either right or wrong.")
                  }
               ## No other validity issues. Non-character names cannot be assigned,

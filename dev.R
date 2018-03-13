@@ -22,7 +22,7 @@ file.copy("prior.R",paste(packname,"/R",sep=""))
 file.copy("eap.R",paste(packname,"/R",sep=""))
 file.copy("print.R",paste(packname,"/R",sep=""))
 
-## Check description file before running the codes below
+## Check the description file before running the codes below
 
 raschpack<-as.package(packname)
 load_all(raschpack)
